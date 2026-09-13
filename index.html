@@ -95,7 +95,7 @@
 
     /* hero */
     .hero{
-      min-height:700px;background:#090b0b;position:relative;color:#fff;overflow:hidden;
+      min-height:840px;background:#090b0b;position:relative;color:#fff;overflow:hidden;
       display:flex;align-items:center;
     }
     .hero:before{
@@ -436,11 +436,11 @@
             <a href="#contact" class="btn btn-red">Book Your First Visit <i class="fa-solid fa-arrow-right"></i></a>
             <a href="#programs" class="btn btn-outline">Explore Programs</a>
           </div>
-          <div class="hero-trust">
+          <!-- <div class="hero-trust">
             <div><strong>01</strong><small>Personal Coaching</small></div>
             <div><strong>02</strong><small>Expert Trainers</small></div>
             <div><strong>03</strong><small>Modern Equipment</small></div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="hero-scroll">Scroll to explore <i class="fa-solid fa-arrow-down"></i></div>
@@ -853,7 +853,7 @@
       const w = Number(document.getElementById('weight').value);
       if (!h || !w) return;
       const bmi = w / (h * h);
-      let category = bmi < 18.5 ? 'ওজন প্রয়োজনের চেয়ে কম হতে পারে' : bmi < 25 ? 'স্বাস্থ্যকর BMI রেঞ্জ' : bmi < 30 ? 'ওজন প্রয়োজনের চেয়ে বেশি হতে পারে' : 'স্থূলতার রেঞ্জ';
+      let category = bmi < 18.5 ? 'Underweight' : bmi < 25 ? 'Healthy BMI Range' : bmi < 30 ? 'Overweight' : 'Obesity Range';
       const healthyMin = 18.5 * h * h;
       const healthyMax = 24.9 * h * h;
       const result = document.getElementById('bmiResult');
